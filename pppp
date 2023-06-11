@@ -280,9 +280,9 @@
             }
             var i = t("./Node");
             r.prototype._buildNodes = function(t, e, r) {
-                var n, o, s = new Array(e);
+                var n, o, s = [];
                 for (n = 0; e > n; ++n)
-                    for (s[n] = new Array(t),
+                    for (s[n] = [],
                     o = 0; t > o; ++o)
                         s[n][o] = new i(o,n);
                 if (void 0 === r)
@@ -347,9 +347,9 @@
             }
             ,
             r.prototype.clone = function() {
-                var t, e, n = this.width, o = this.height, s = this.nodes, a = new r(n,o), u = new Array(o);
+                var t, e, n = this.width, o = this.height, s = this.nodes, a = new r(n,o), u = [];
                 for (t = 0; o > t; ++t)
-                    for (u[t] = new Array(n),
+                    for (u[t] = [],
                     e = 0; n > e; ++e)
                         u[t][e] = new i(e,t,s[t][e].walkable);
                 return a.nodes = u,
